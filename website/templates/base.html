@@ -15,7 +15,7 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       crossorigin="anonymous"
     />
-    <title>{% block title %}test{% endblock %}</title> <!--block is used to that the child templated can change things inside of the block and endblock-->
+    <title>{% block title %}{% endblock %}</title> <!--block is used to that the child templated can change things inside of the block and endblock-->
 </head>
 <body>
 
@@ -25,7 +25,7 @@
          </button>
          <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav">
-              {% if user.is_authenticated%}
+              {% if user.is_authenticated %}
               <a class="nav-item nav-link" id="home" href="/home">Home</a>
               <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
               {% else %}
